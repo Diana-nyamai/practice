@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+}
+header{
+    width: 100%;
+    background: rgb(33, 101, 156);
+    color: #fff;
+    height: 80px;
+    padding:20px;
+}
+header a{
+    color: #fff;
+}
+.logo{
+    font-size: 30px;
+}
+ul{
+    float: right;
+}
+ul li{
+    display: inline;
+    padding: 0 10px;
+}
+#check{
+    display: none;
+}
+.checkbtn{
+    color: #fff;
+    font-size: 20px;
+    float: right;
+    display: none;
+}
+@media all and (max-width: 600px){
+    header ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: rgb(33, 101, 156);
+        text-align: center;
+        transition: all .5s;
+    }
+    ul li{
+        display: block;
+        padding: 20px 0;
+    }
+    .checkbtn{
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
