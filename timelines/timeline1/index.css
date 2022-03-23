@@ -30,4 +30,40 @@ div.one::after{
     content: "";
     width: 6vmax;
     height: 6vmax;
+    display: block;
+    position:absolute;
+    top: calc(50% - 3vmax);
+    left: calc(50% - 3vmax);
+    border-left: 3px solid #fff;
+    border-radius: 100%;
+    animation: spinLeft 800ms linear infinite;
+}
+div.one::after{
+    width: 4vmax;
+    height: 4vmax;
+    top: calc(50% - 2vmax);
+    left: calc(50% - 2vmax);
+    border: 0;
+    border-right: 2px solid #fff;
+    animation: none;
+}
+@keyframes spinRight {
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+.centre{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+.start ul li:nth-child(odd){
+    background: url(./icon2.png) 65px top no-repeat;
+    padding-top: 100px !important;
 }
